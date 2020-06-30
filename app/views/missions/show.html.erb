@@ -1,0 +1,5 @@
+<h1>Mission Name: <%= @mission.name %></h1>
+
+<p>Scientist: <%= link_to @mission.scientist.name, scientist_path(@mission.scientist.id) %></p>
+
+<p>Planet Explored: <%= link_to @mission.planet.name, planet_path(@mission.planet.id) %></p>

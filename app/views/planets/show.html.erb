@@ -1,0 +1,10 @@
+<h2>Planet Name: <%= @planet.name %></h2>
+
+<p>Distance from Earth: <%= @planet.distance_from_earth %></p>
+<p>Nearest Star: <%= @planet.nearest_star %></p>
+
+<h4>Missions to <%= @planet.name %>:</h4>
+
+<% @planet.missions.each do |mission| %>
+<p><%= link_to mission.name, mission_path(mission.id) %><p>
+<% end %>
